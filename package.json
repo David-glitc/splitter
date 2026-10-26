@@ -1,0 +1,28 @@
+{
+  "name": "splitter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "contracts:build": "cd contracts && forge build",
+    "test": "cd contracts && forge test",
+    "build": "node scripts/build.mjs",
+    "preflight": "node scripts/preflight.mjs",
+    "deploy:contracts": "node scripts/deploy.mjs",
+    "deploy:sites": "node scripts/deploy-sites.mjs",
+    "preview": "node scripts/preview.mjs",
+    "check:browser": "node scripts/browser-check.mjs",
+    "fork:check": "node scripts/fork-check.mjs",
+    "publish": "node scripts/deploy-vercel.mjs"
+  },
+  "dependencies": {
+    "viem": "2.55.19"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "@playwright/test": "1.56.1"
+  },
+  "description": "Fixed revenue splits for up to ten wallets. Payments in BOT or USDT divide by percentage automatically.",
+  "license": "MIT",
+  "repository": "https://github.com/David-glitc/splitter",
+  "homepage": "https://splitterbot.vercel.app"
+}
